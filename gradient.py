@@ -15,5 +15,10 @@ cv.imshow('Laplacian',lap)
 
 sobelx = cv.Sobel(gray, cv.CV_64F, 1 ,0)
 sobely = cv.Sobel(gray, cv.CV_64F, 0 ,1)
+combine_sobel = cv.bitwise_or(sobelx,sobely)
+
+#cv.imshow('Sobel X',sobelx)
+#cv.imshow('Sobel Y',sobely)
+cv.imshow('Sobel Combined',combine_sobel)
 
 cv.waitKey(0)
